@@ -13,7 +13,7 @@
         </div>
     </div>
 </template>
-<style>
+<style scoped>
 .form {
     padding-top: 20px;
     padding-bottom: 40px;

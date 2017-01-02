@@ -2637,3 +2637,7 @@
 [0102/144206:ERROR:process_reader_win.cc(233)] ReadMemory at 0x6f6000 of 40960 bytes failed: 仅完成部分的 ReadProcessMemory 或 WriteProcessMemory 请求。 (0x12B)
 [0102/144206:ERROR:crash_report_exception_handler.cc(98)] WriteEverything failed
 [0102/144206:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: 已尝试访问正在退出的过程。  (0xc000010a)
+[0102/165229:ERROR:process_reader_win.cc(142)] SuspendThread: 拒绝访问。 (0x5)
+[0102/165229:ERROR:exception_snapshot_win.cc(87)] thread ID 5796 not found in process
+[0102/165229:WARNING:crash_report_exception_handler.cc(56)] ProcessSnapshotWin::Initialize failed
+[0102/165229:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: 已尝试访问正在退出的过程。  (0xc000010a)

@@ -14,7 +14,7 @@
         </div>
     </li>
 </template>
-<style>
+<style scoped>
 .detail {
     padding: 20px;
 }
