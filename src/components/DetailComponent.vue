@@ -7,9 +7,9 @@
             </div>
             <div class="tagList">
                 <div class="tag col-xs-3" v-for="(tag,tagIndex) in item.tags">{{tag}}<span class="glyphicon glyphicon-remove deleteTag pull-right" @click="deleteTag(tagIndex)"></span></div>
-                <div class="addTag pull-left glyphicon glyphicon-plus" data-toggle="modal" data-target="#layer" @click="$emit('updateValue',$refs.newValue.value)"></div>
+                <div class="addTag pull-left glyphicon glyphicon-plus" data-toggle="modal" data-target="#layer" @click="$emit('updateValue',index)"></div>
             </div>
-            <input type="hidden" ref="newValue" v-model="index"/>
+            <input type="hidden" v-model="index"/>
             <hr class="col-xs-12"/>
         </div>
     </li>
@@ -67,7 +67,7 @@ li {
         },
         methods: {
             deleteTag: function(tagIndex){
-                this.$emit('updateValue',this.$refs.newValue.value);
+                this.$emit('updateValue',this.index);
                 this.$emit('deleteTag',tagIndex);
             },
 

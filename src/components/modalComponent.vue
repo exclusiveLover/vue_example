@@ -8,7 +8,7 @@
                     </button>
                     <div class="form-group">
                         <label for="exampleInputEmail1">添加标签</label>
-                        <input type="email" ref="newTag" class="form-control" id="exampleInputEmail1">
+                        <input type="email" v-model="newTag" class="form-control" id="exampleInputEmail1">
                     </div>
                 </div>
                 <div class="modal-body text-right">
@@ -27,13 +27,13 @@
         props:["index"],
         data(){
             return{
-                msg:'hello vue'
+                newTag:''
             }
         },
         methods: {
             addTag: function(){
-                this.$emit("addTag",this.$refs.newTag.value);
-                this.$refs.newTag.value='';
+                this.$emit("addTag",this.newTag);
+                this.newTag='';
             }
         }
     }

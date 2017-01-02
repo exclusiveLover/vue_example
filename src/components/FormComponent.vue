@@ -2,10 +2,10 @@
     <div class="form">
         <div class="container">
             <div class="form-group col-xs-8">
-                <input type="email" ref="userName" class="form-control userName" placeholder="请输入昵称">
+                <input type="email" v-model="userName" class="form-control userName" placeholder="请输入昵称">
             </div>
             <div class="form-group col-xs-12">
-                <textarea ref="content" class="form-control content" maxlength="300" rows="4" style="resize:none"
+                <textarea v-model="content" class="form-control content" maxlength="300" rows="4" style="resize:none"
                           placeholder="请输入留言内容，不超过300字" @keyup="getNum"></textarea>
                 <span>{{num}}/300</span>
                 <button class="btn btn-primary" @click="addItem">发布</button>
@@ -49,9 +49,9 @@
             },
             addItem: function(){
                 //console.log(newDetail);
-                this.$emit('addItem',this.$refs.userName.value,this.$refs.content.value);
-                userName: this.$refs.userName.value='';
-                content: this.$refs.content.value='';
+                this.$emit('addItem',this.userName,this.content);
+                this.userName='';
+                this.content='';
                 this.num=0;
             }
         }
