@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+           留言板
+    </nav>
+    <div class="form">
+        <div class="container">
+            <form role="form">
+                <div class="form-group col-xs-8">
+                    <input type="email" class="form-control" placeholder="请输入昵称">
+                </div>
+                <div class="form-group col-xs-12">
+                    <textarea class="form-control" rows="4" style="resize:none" placeholder="请输入留言内容，不超过300字"></textarea>
+                    <span>0/300</span>
+                    <button type="submit" class="btn btn-primary">发布</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="detail">
+        <div class="container">
+            <div>
+                <p class="col-xs-10">张三：我觉得你们的产品真不错啊</p>
+                <span class="glyphicon glyphicon-trash col-xs-1 deleteItem"></span>
+            </div>
+            <div class="tagList">
+                <div class="tag col-xs-3">用户反馈<span class="glyphicon glyphicon-remove deleteTag pull-right"></span></div>
+                <div class="tag col-xs-3">已处理<span class="glyphicon glyphicon-remove deleteTag pull-right"></span></div>
+                <span class="addTag col-xs-1 glyphicon glyphicon-plus"></span>
+            </div>
+            <hr class="col-xs-12"/>
+        </div>
+    </div>
+
+
+
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>
